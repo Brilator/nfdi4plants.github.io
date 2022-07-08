@@ -1,0 +1,272 @@
+<html class="has-navbar-fixed-top" style="scroll-behavior: smooth;">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png"/>
+    <title>
+      nfdi4plants - Knowledge base contribution guide
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.4/dist/css/bulma-collapsible.min.css"/>
+    <script defer="true" src="https://kit.fontawesome.com/0d3e0ea7a6.js" crossOrigin="anonymous"></script>
+    <script type="module" src="/js/bundle.js"></script>
+    <style>
+      
+                    body {
+                        margin: 0px;
+                    }
+
+                    thead tr th, strong {
+                        color: var(--accent-text-color) !important
+                    }
+
+                    a {
+                        color: var(--link-color, #4FB3D9) !important;
+                    }
+
+                    a:hover {
+                        color: var(--link-hover-color, #3A3A3A) !important;
+                    }
+
+                    thead {
+                        font-size: 1.2rem;
+                    }
+
+                    nfdi-toc, nfdi-body {
+                        --outside-background-color: rgb(240, 243, 246);
+                        --header-color: rgb(10, 12, 16)
+                        --element-text-color: #0E1116;
+                        --element-background-color: #fff;
+                        --accent-text-color: rgb(31, 194, 167);
+                        --link-color: #4FB3D9;
+                        --link-hover-color: #8ad3ee;
+                    }
+                
+    </style>
+  </head>
+  <nfdi-navbar></nfdi-navbar>
+  <body>
+    <nfdi-body class="content" hasSidebar="true">
+      <nfdi-sidebar-element slot="sidebar" isActive="true">
+        <div slot="title">
+          Fundamentals
+        </div>
+        <h1 slot="inner" href="/content/docs/ResearchDataManagement.html">Research Data Management</h1>
+<h1 slot="inner" href="/content/docs/FairDataPrinciples.html">FAIR Data Principles</h1>
+<h1 slot="inner" href="/content/docs/Metadata.html">Metadata</h1>
+<h1 slot="inner" href="/content/docs/DataSharing.html">Data Sharing</h1>
+<h1 slot="inner" href="/content/docs/DataPublications.html">Data Publications</h1>
+<h1 slot="inner" href="/content/docs/DataManagementPlan.html">Data Management Plan</h1>
+<h1 slot="inner" href="/content/docs/VersionControlGit.html">Version Control & Git</h1>
+<h1 slot="inner" href="/content/docs/PublicDataRepositories.html">Public Data Repositories</h1>
+<h1 slot="inner" href="/content/docs/PersistentIdentifiers.html">Persistent Identifiers</h1>
+
+      </nfdi-sidebar-element>
+      <nfdi-sidebar-element slot="sidebar" isActive="true">
+        <div slot="title">
+          Implementation within DataPLANT
+        </div>
+        <h1 slot="inner" href="/content/docs/AnnotatedResearchContext.html">Annotated Research Context</h1>
+<h2 slot="inner" href="/content/docs/QuickStart_arc.html">ARC QuickStart</h2>
+<h1 slot="inner" href="/content/docs/DataHub.html">DataHUB</h1>
+<!-- ```Training & Tutorials -->
+<!-- # Swate Tutorial Videos:/content/docs/swate_videos.html -->
+<!-- # Sync ARCs via GitHub Desktop:/content/docs/tutorials/github_desktop.html -->
+<!-- # Markdown:/content/docs/tutorials/markdown.html -->
+<!-- ``` -->
+
+      </nfdi-sidebar-element>
+      <nfdi-sidebar-element slot="sidebar" isActive="true">
+        <div slot="title">
+          Feedback
+        </div>
+        <h1 slot="inner" href="/content/docs/Feedback.html">Feedback & Contribution</h1>
+
+      </nfdi-sidebar-element>
+      <h1 class="front-header">
+        Knowledge base contribution guide
+      </h1>
+      <i class="help">
+        last updated at 2022-07-08
+      </i>
+      <nfdi-toc></nfdi-toc>
+      <p>Your contribution to the DataPLANT knowledge base is highly appreciated.
+This guide is intended to show you how to contribute new articles and tutorials or review and adapt parts of existing ones.</p>
+<!-- most efficiently for you and the knowledge base curators -->
+<p>For smaller changes and suggestions, please refer to <a href="https://nfdi4plants.github.io/content/docs/Feedback.html">https://nfdi4plants.github.io/content/docs/Feedback.html</a>.</p>
+<nfdi-h2 id="introduction">Introduction</nfdi-h2>
+<p>The DataPLANT knowledge base is built on <a href="https://nfdi4plants.github.io/web-components-docs/">nfdi-web-components</a> and will fit all <strong>markdown</strong> content into this &quot;framework&quot;.
+For a general introduction to writing markdown, see: <a href="tutorials/markdown.md">Markdown tutorial</a> and references therein.</p>
+<nfdi-h2 id="github-routines">GitHub Routines</nfdi-h2>
+<blockquote>
+<p>Note: This is not a full-fledged GitHub tutorial. Please refer to available tutorials online or contact the knowledge base curators.</p>
+</blockquote>
+<ol>
+<li><p>Sign up for a GitHub account.</p>
+</li>
+<li><p><a href="https://github.com/nfdi4plants/nfdi4plants.github.io/fork">Fork</a> the knowledge base git repository.</p>
+<ul>
+<li>This creates a copy of the knowledge base repository in your own GitHub account.</li>
+<li>In the top left, you will see that the repository is associated with your account (1) and forked from the main repository (2).</li>
+<li>You can either directly add or edit content using GitHub or clone (3) your repository to work on it locally.</li>
+<li>Be aware that your fork is not automatically updated, if the main repository updates. Make sure to update your fork regularly (especially before creating new content) by clicking &quot;Fetch upstream&quot; (4) in the top-right corner of your repository.</li>
+<li>If you cloned your repository locally, you also have to update the local clone (via &quot;git pull&quot;).</li>
+</ul>
+</li>
+</ol>
+<p><img src="./img/contribution_git.png" alt="Git Routine" /></p>
+<ol start="3">
+<li><p>You can work and make any changes on your own fork.</p>
+</li>
+<li><p>Once you want to submit those changes to the main repository, you can open a &quot;pull request&quot; by clicking &quot;Contribute&quot; (5) in the top-right corner.</p>
+<blockquote>
+<p>Remember to &quot;Fetch upstream&quot; (4), if your fork is not up-to-date with the main repository.</p>
+</blockquote>
+</li>
+<li><p>If edited or added existing content, please assign the original author during your pull-request to review your changes.</p>
+</li>
+</ol>
+<ul>
+<li>The github user name of the original author is stored in the yaml block on top under <code>author_github</code></li>
+<li>During the pull-request mention the author via <code>@&lt;author_github&gt;</code>.</li>
+</ul>
+<nfdi-h2 id="authoring-new-content">Authoring new content</nfdi-h2>
+<p>To add more documentation, add a markdown file to <code>/src/docs</code>. The file MUST start with a metadata block:</p>
+<!--used yml here as code language for nice color syntax-->
+<nfdi-code class="language-yml">---
+layout: docs
+title: Metadata
+published: 2022-05-09
+author: Dominik Brilhaus
+author_orcid: https://orcid.org/0000-0001-9021-3197
+author_github: brilator
+add toc: true
+add sidebar: sidebars\mainSidebar.md
+article_status: published
+todo:
+    - update to include changes in latest tool version
+---</nfdi-code>
+<ul>
+<li>All keys (<code>layout</code>, <code>author</code>, etc.) are <strong>not</strong> case sensitive.</li>
+<li>All fields can be at ANY position.</li>
+<li>MUST start and end with <code>---</code> .</li>
+<li>MUST contain <code>layout: docs</code>.
+<ul>
+<li>This triggers fornax parsing to html.</li>
+</ul>
+</li>
+<li>MUST contain <code>title: xxxx</code>.
+<ul>
+<li>Will be added as &quot;# xxxx&quot; to the html.</li>
+<li>Will be used to name the generated webpage.</li>
+</ul>
+</li>
+<li>MUST contain <code>published: yyyy-MM-dd</code>.</li>
+<li>MAY contain <code>author: xxxx</code>.</li>
+<li>MAY contain <code>author_github: xxxx</code>.
+<ul>
+<li>This helps authoring and reviewing content.</li>
+</ul>
+</li>
+<li>MAY contain <code>add toc: true</code>.
+<ul>
+<li>Will add automated table of contents from all found headers in content.</li>
+</ul>
+</li>
+<li>MAY contain <code>add sidebar: realtive\path\to\sidebar.md</code> to add the sidebar element to the page.</li>
+<li>MAY contain <strong>any</strong> other metadata. The information will be read but will not affect the generated html.</li>
+</ul>
+<nfdi-h3 id="sidebar">Sidebar</nfdi-h3>
+<p>Sidebar files MAY be in ANY <strong>subdirectory</strong> of <code>/src/docs</code>. Sidebar markdown files must start with a metadata block:</p>
+<nfdi-code class="language-yml">---
+published: 2022-05-09
+article_status: published
+---</nfdi-code>
+<ul>
+<li>MAY contain <strong>any</strong> other metadata. The information will be read but will not affect the generated html.</li>
+</ul>
+<p>To add a sidebar element to the page, use the codeblock syntax:</p>
+<pre><code>```Data Management Plan
+# Data Management Plan:/docs/DataManagementPlan.html
+# DataPLANT's Data Management Plan Generator:/docs/DataManagementPlan.html#dataplants-data-management-plan-generator
+```</code></pre>
+<ul>
+<li>All text after the opening &quot;```&quot; will be parsed to the element title.</li>
+<li>Inner text MUST only contain heading lines.
+<ul>
+<li>Only headers up to <code>###</code> are parsed. All header with more depth are parsed to <code>###</code>.</li>
+</ul>
+</li>
+<li>Tries to match active browser url to referenced <code>href</code> of any element to set active page.</li>
+</ul>
+<nfdi-h2 id="do-not">Do not!</nfdi-h2>
+<ul>
+<li>Store a markdown (.md, .markdown) file in the /docs folder, that is not supposed to be parsed. Fornax will look for the yaml header and break if it does not exist.</li>
+</ul>
+<nfdi-h2 id="live-testing">(Live) Testing</nfdi-h2>
+<ul>
+<li>see</li>
+</ul>
+<blockquote>
+<p>Note:</p>
+</blockquote>
+<nfdi-h2 id="references">References</nfdi-h2>
+<ul>
+<li>Literature / information references: additional bibliography block below</li>
+<li>External links (tools, sites, platforms): as hyper-link</li>
+<li>Knowledge base cross-references: relative path to *.md document, <strong>BUT</strong> replace the <code>.md</code> file extension with <code>.html</code>, as the markdown files are parsed to html.</li>
+</ul>
+<nfdi-h2 id="structure-and-format">Structure and format</nfdi-h2>
+<ul>
+<li>Max. 3 headline levels (## &amp; ###)</li>
+</ul>
+<nfdi-h2 id="images">Images</nfdi-h2>
+<ul>
+<li>simple markdown logic (not HTML): <code>![name_of_image](path_to_image.png)</code></li>
+</ul>
+<nfdi-h2 id="file-naming">File naming</nfdi-h2>
+<ul>
+<li>no special characters</li>
+<li>preferably all lowercase to ease cross-references</li>
+</ul>
+<nfdi-h2 id="content">Content</nfdi-h2>
+<nfdi-h3 id="addressing-readers">Addressing readers</nfdi-h3>
+<ul>
+<li>direct address (&quot;you can&quot;, not &quot;user can&quot; or &quot;one can...&quot;)</li>
+</ul>
+<nfdi-h3 id="language">Language</nfdi-h3>
+<p>British English (?)</p>
+<nfdi-h2 id="link-collection">Link collection</nfdi-h2>
+<blockquote>
+<p>Note: This is just a link collection for recurrent use in KB articles
+Nothing automatised. Just copy/paste.</p>
+</blockquote>
+<!-- Links to DataPLANT knowledge base (kb-) -->
+<!-- Links to DataPLANT Homepage (hp-) -->
+<!-- Links to DataPLANT GitHub (gh-) -->
+<!-- Links to external (ext-) sources -->
+
+      <h3>
+        Dataplant Support
+      </h3>
+      <div>
+        Besides these technical solutions, DataPLANT supports you with community-engaged data stewardship. For further assistance, feel free to reach out via our 
+        <a href="https://support.nfdi4plants.org">
+          helpdesk
+        </a>
+         or by contacting us 
+        <a href="javascript:location='mailto:info@nfdi4plants.org';void 0">
+          directly
+        </a>
+        .
+      </div>
+      <div>
+        <a target="_blank" href="https://github.com/nfdi4plants/nfdi4plants.github.io/tree/main/src/content/docs/ContributionGuide.md" style="margin-left: auto; display: block; width: 130px;">
+          ✏️ Edit this page
+        </a>
+      </div>
+    </nfdi-body>
+  </body>
+  <nfdi-footer></nfdi-footer>
+</html>
